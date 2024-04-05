@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Tetris</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+ 
+
+<div id="divCenter">
+	<div id="divLeft">
+		<div id="divMain">
+			 <img id="imglogo" src="logo.jpg" height="70" width="250"> 
+			 <button id = "btnPlay" class="mainBtn" type="button">PLAY</button> 
+			 <button class="mainBtn" type="button">VIEW STATS</button> 
+			 <!--<svg width="30" height="30">
+			  <rect id="r1" width="25" height="25" />
+			</svg>-->
+			<audio id="player" autoplay loop>
+			</audio>
+
+			<div id="ajust">
+				<!-- Tetrimino Cyan -->
+				<div id="TetriminoCyanHorizontal">
+					<div class="tt0-a rect cyan">
+					</div>
+					<div class="tt0-b rect cyan">
+					</div>
+					<div class="tt0-c rect cyan">
+					</div>
+					<div class="tt0-d rect cyan">
+					</div>
+				</div>
+				<!-- Tetrimino magenta -->
+				<div id="TetriminoMagentaUp">
+					<div class="tt1-a rect magenta">
+					</div>
+					<div class="tt1-b rect magenta">
+					</div>
+					<div class="tt1-c rect magenta">
+					</div>
+					<div class="tt1-d rect magenta">
+					</div>
+				</div>
+				<!-- Tetrimino orange -->
+				<div id="TetriminoOrangeRight">
+					<div class="tt2-a rect orange">
+					</div>
+					<div class="tt2-b rect orange">
+					</div>
+					<div class="tt2-c rect orange">
+					</div>
+					<div class="tt2-d rect orange">
+					</div>
+				</div>
+
+				<!-- Tetrimino blue -->
+				<div id="TetriminoBlueLeft">
+					<div class="tt3-a rect blue">
+					</div>
+					<div class="tt3-b rect blue">
+					</div>
+					<div class="tt3-c rect blue">
+					</div>
+					<div class="tt3-d rect blue">
+					</div>
+				</div>
+
+				
+
+				<!-- Tetrimino yellow -->
+				<div id="TetriminoYellow">
+					<div class="tt4-a rect yellow">
+					</div>
+					<div class="tt4-b rect yellow">
+					</div>
+					<div class="tt4-c rect yellow">
+					</div>
+					<div class="tt4-d rect yellow">
+					</div>
+				</div>
+
+				<!-- Tetrimino green -->
+				<div id="TetriminoGreenVertical">
+					<div class="tt5-a rect green">
+					</div>
+					<div class="tt5-b rect green">
+					</div>
+					<div class="tt5-c rect green">
+					</div>
+					<div class="tt5-d rect green">
+					</div>
+				</div>
+
+
+				<!-- Tetrimino magenta -->
+				<div id="TetriminoMagentaRight">
+					<div class="tt6-a rect magenta">
+					</div>
+					<div class="tt6-b rect magenta">
+					</div>
+					<div class="tt6-c rect magenta">
+					</div>
+					<div class="tt6-d rect magenta">
+					</div>
+				</div>
+
+
+				<!-- Tetrimino red -->
+				<div id="TetriminoRedHorizontal">
+					<div class="tt7-a rect red">
+					</div>
+					<div class="tt7-b rect red">
+					</div>
+					<div class="tt7-c rect red">
+					</div>
+					<div class="tt7-d rect red">
+					</div>
+				</div>
+
+
+				<!-- Tetrimino cyan -->
+				<div id="TetriminoCyanVertical">
+					<div class="tt8-a rect cyan">
+					</div>
+					<div class="tt8-b rect cyan">
+					</div>
+					<div class="tt8-c rect cyan">
+					</div>
+					<div class="tt8-d rect cyan">
+					</div>
+				</div>
+
+
+				<!-- Tetrimino blue -->
+				<div id="TetriminoOrangeLeft">
+					<div class="tt9-a rect orange">
+					</div>
+					<div class="tt9-b rect orange">
+					</div>
+					<div class="tt9-c rect orange">
+					</div>
+					<div class="tt9-d rect orange">
+					</div>
+				</div>
+
+				<!-- Tetrimino Orange -->
+				<div id="TetriminoBlueRight">
+					<div class="tt10-a rect blue">
+					</div>
+					<div class="tt10-b rect blue">
+					</div>
+					<div class="tt10-c rect blue">
+					</div>
+					<div class="tt10-d rect blue">
+					</div>
+				</div>
+
+				<!-- Tetrimino magenta -->
+				<div id="TetriminoMagentaDown">
+					<div class="tt11-a rect magenta">
+					</div>
+					<div class="tt11-b rect magenta">
+					</div>
+					<div class="tt11-c rect magenta">
+					</div>
+					<div class="tt11-d rect magenta">
+					</div>
+				</div>
+
+
+				<!-- Tetrimino magenta -->
+				<div id="TetriminoMagentaLeft">
+					<div class="tt12-a rect magenta">
+					</div>
+					<div class="tt12-b rect magenta">
+					</div>
+					<div class="tt12-c rect magenta">
+					</div>
+					<div class="tt12-d rect magenta">
+					</div>
+				</div>
+
+				<!-- Tetrimino blue -->
+				<div id="TetriminoBlueUp">
+					<div class="tt13-a rect blue">
+					</div>
+					<div class="tt13-b rect blue">
+					</div>
+					<div class="tt13-c rect blue">
+					</div>
+					<div class="tt13-d rect blue">
+					</div>
+				</div>
+
+				<!-- Tetrimino blue -->
+				<div id="TetriminoBlueDown">
+					<div class="tt14-a rect blue">
+					</div>
+					<div class="tt14-b rect blue">
+					</div>
+					<div class="tt14-c rect blue">
+					</div>
+					<div class="tt14-d rect blue">
+					</div>
+				</div>
+
+				<!-- Tetrimino Red -->
+				<div id="TetriminoRedVertical">
+					<div class="tt15-a rect red">
+					</div>
+					<div class="tt15-b rect red">
+					</div>
+					<div class="tt15-c rect red">
+					</div>
+					<div class="tt15-d rect red">
+					</div>
+				</div>
+
+				<!-- Tetrimino green -->
+				<div id="TetriminoGreenHorizontal">
+					<div class="tt16-a rect green">
+					</div>
+					<div class="tt16-b rect green">
+					</div>
+					<div class="tt16-c rect green">
+					</div>
+					<div class="tt16-d rect green">
+					</div>
+				</div>
+
+				<!-- Tetrimino orange -->
+				<div id="TetriminoOrangeUp">
+					<div class="tt17-a rect orange">
+					</div>
+					<div class="tt17-b rect orange">
+					</div>
+					<div class="tt17-c rect orange">
+					</div>
+					<div class="tt17-d rect orange">
+					</div>
+				</div>
+
+					<!-- Tetrimino orange -->
+				<div id="TetriminoOrangeDown">
+					<div class="tt18-a rect orange">
+					</div>
+					<div class="tt18-b rect orange">
+					</div>
+					<div class="tt18-c rect orange">
+					</div>
+					<div class="tt18-d rect orange">
+					</div>
+				</div>
+			</div>
+
+			
+
+		</div>
+	</div>
+	<div id="divRight">
+		<div id="nextDiv">
+			<div id="nextHeader">
+				<p id="pnextHeader">NEXT</p>
+			</div>
+			<div id="nextDisplay">
+				
+				<div id="nextDefault">
+					<div class="tt15-a rect red">
+					</div>
+					<div class="tt15-b rect red">
+					</div>
+					<div class="tt15-c rect red">
+					</div>
+					<div class="tt15-d rect red">
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+		 <img id="imgPalace" src="palace.png">
+
+		<div id="scoreDiv">
+			<div id="scoreHeader">
+				<p id="pscoreHeader">SCORE</p>
+				<p id="scoreDisplay">0</p>
+			</div>
+			
+		</div>
+		<div id="levelDiv">
+			<div id="levelHeader">
+				<p id="plevelHeader">LEVEL</p>
+				<p id="levelDisplay">0</p>
+			</div>
+		</div>
+		<div id="linesDiv">
+			<div id="linesHeader">
+				<p id="plinesHeader">LINES</p>
+				<p id="linesDisplay">0</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script> 
+</body>
+
+</html> 
